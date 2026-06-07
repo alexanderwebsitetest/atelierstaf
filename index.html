@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier Staf – Bevel, Belgium</title>
+
+    <!-- Artistic, floral-inspired Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            background-color: #ffffff;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        /* Fixed Contact tab (always visible) */
+        nav {
+            width: 100%;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* Hero section */
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background-image: url('https://images.unsplash.com/photo-1589998059171-988d887df646');
+            /* Pottery painting image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 80px;
+            margin: 0;
+            margin-top: 60px; /* ensures text is not hidden behind fixed nav */
+        }
+
+        h2 {
+            font-size: 26px;
+            margin: 10px 0 30px 0;
+            font-weight: 300;
+        }
+
+        .coming-soon {
+            font-size: 32px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Contact reveal */
+        #contact-info {
+            display: none;
+            margin-top: 10px;
+            font-size: 20px;
+            background: rgba(255,255,255,0.8);
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a onclick="toggleContact()">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Atelier Staf</h1>
+        <h2>Bevel, Belgium</h2>
+        <div class="coming-soon">Coming soon</div>
+        <div id="contact-info">evi_vandenbulck@hotmail.com</div>
+    </div>
+
+    <script>
+        function toggleContact() {
+            const info = document.getElementById("contact-info");
+            info.style.display = info.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html>
