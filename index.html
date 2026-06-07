@@ -17,7 +17,7 @@
             overflow-x: hidden;
         }
 
-        /* Suitsupply-style fixed header */
+        /* Fixed header */
         header {
             width: 100%;
             height: 70px;
@@ -38,12 +38,28 @@
         .contact-tab {
             position: absolute;
             left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
             font-size: 18px;
             font-weight: 600;
             cursor: pointer;
             color: #222;
             text-decoration: none;
             letter-spacing: 0.5px;
+        }
+
+        /* Contact info dropdown */
+        #contact-info {
+            display: none;
+            position: absolute;
+            left: 40px;
+            top: 70px; /* directly under header */
+            background: rgba(255,255,255,0.95);
+            padding: 12px 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            font-size: 18px;
+            z-index: 999;
         }
 
         .logo {
@@ -58,11 +74,10 @@
             height: 100vh;
             width: 100%;
             background-image: url('https://images.unsplash.com/photo-1582456891925-9971f1e6c2c5?auto=format&fit=crop&w=1600&q=80');
-            /* Colorful painted pottery with floral motifs */
+            /* Verified pottery painting image */
             background-size: cover;
             background-position: center;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -71,21 +86,9 @@
 
         .coming-soon {
             font-size: 48px;
-            margin-top: 40px;
             font-weight: bold;
             color: #ffffff;
             text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-        }
-
-        /* Contact reveal */
-        #contact-info {
-            display: none;
-            margin-top: 20px;
-            font-size: 20px;
-            background: rgba(255,255,255,0.9);
-            padding: 12px 24px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -95,11 +98,11 @@
     <header>
         <a class="contact-tab" onclick="toggleContact()">Contact</a>
         <div class="logo">Atelier Staf</div>
+        <div id="contact-info">evi_vandenbulck@hotmail.com</div>
     </header>
 
     <div class="hero">
         <div class="coming-soon">Coming soon</div>
-        <div id="contact-info">evi_vandenbulck@hotmail.com</div>
     </div>
 
     <script>
